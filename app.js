@@ -216,7 +216,10 @@ const gameplay = {
             games.state = param
         }
 
-        room_players.forEach(player => io.to(player.id).emit('gameplay-update', games))
+        room_players.forEach(player => {
+            if (typeof player.id == 'undefined') return
+            io.to(player.id).emit('gameplay-update', games)
+        })
 
         if (param != null) {
             games.state = tmp_state
