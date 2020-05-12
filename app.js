@@ -3,7 +3,7 @@ const http = require('http').Server(app)
 const io = require('socket.io')(http)
 
 // config
-const port = 3000
+const port = 8080
 
 // listenner
 printWelcome()
