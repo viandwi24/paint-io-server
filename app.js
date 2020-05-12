@@ -219,6 +219,7 @@ const gameplay = {
         room_players.forEach(player => {
             if (typeof player == 'undefined' || typeof player.id == 'undefined') return
             io.to(player.id).emit('gameplay-update', games)
+            // 
         })
 
         if (param != null) {
