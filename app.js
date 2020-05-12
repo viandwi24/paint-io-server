@@ -156,7 +156,7 @@ const gameplay = {
         let room_players = gameplay.players(games)
         let random = Math.floor(Math.random() * room_players.length)
 
-        let words = ['banana', 'apple']
+        let words = ['banana', 'apple', 'love', 'parachute', 'watermelon', 'cloud', 'thunder', 'umbrella']
         let word_rand = Math.floor(Math.random() * words.length)
 
         games.state = 'player-draw'
